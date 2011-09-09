@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">	
+	<item
+		android:id="@+id/bugreport"
+		android:title="Bug Report" 
+		android:orderInCategory="10"/>
+</menu>
