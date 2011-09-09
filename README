@@ -1,0 +1,8 @@
+The "ping" application supports multiple destinations to check IP connectivity.
+
+- Translate "*" to dot
+- Maximum 12 hostnames or IP addresses support.
+- update delay about every 5 secs.
+- trying to connect TCP port 80 or TCP echo port.
+- display my local IP addresses
+- admob
