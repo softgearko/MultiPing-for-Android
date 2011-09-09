@@ -1,0 +1,24 @@
+0.7
+- Fix slow startup delay when name service is not available. 
+  (Using multiple threads internally) 
+- show resolved IP address
+
+0.6
+- Remove "Exit" option in "Menu"
+- Exit on Back button pressed
+- Translate * to .(dot) . If you input "1*2*3*4", it will be translated to "1.2.3.4" as IP address.
+- AdMob
+- Change package name (you need re-install Multi Ping)
+
+0.5
+- Add "Add" Button beside text box
+- Add "Exit" option and "Bug Report" option in "Menu"
+
+0.4
+- Maximum 12 hostname or IP addresses support.
+- toast display for name resolving
+- update delay about every 5 secs.
+- trying to connect TCP port 80 or TCP echo port.
+- display my local IP addresses
+- API 3. (android 1.5+)
+
