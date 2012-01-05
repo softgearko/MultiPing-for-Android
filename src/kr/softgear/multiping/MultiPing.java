@@ -91,6 +91,7 @@ public class MultiPing extends Activity {
 				{				
 					PingerItem pi = items.get(i);				
 					if(pi.hostname.equals(hostname)) {
+						Log.v("multping","NameResolver "+hostname + " resolved:" + ia);
 						pi.ia = ia;
 						items.set(i,pi);						
 					}
@@ -479,12 +480,27 @@ public class MultiPing extends Activity {
     			i.putExtra(Intent.EXTRA_EMAIL, new String[]{"softgear@gmail.com"});
     			i.putExtra(Intent.EXTRA_SUBJECT, "BugReport " +  getString(R.string.app_name));
     			startActivity( Intent.createChooser(i, "Select Email App"));
-    			return true;    			
+    			return true;
+    		case R.id.refresh:
+    			refresh();
+    			return true;   
     	}
     	return false;
     }
     
-    public boolean onBackPressed()
+    private void refresh() {
+//		for(PingerItem pi: items) 
+//		{
+//			pi.ia=null;
+//			Thread t = new Thread(new NameResolver(pi.hostname));
+//			t.start();			
+//		}
+    	Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+	}
+
+	public boolean onBackPressed()
     {    		
     	finish();
     	return true;
