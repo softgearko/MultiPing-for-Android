@@ -25,6 +25,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -475,10 +476,16 @@ public class MultiPing extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()) {
     		case R.id.bugreport:
+    			String versionName = ""; 
+				try {
+					versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+				} catch (NameNotFoundException e) {					
+					e.printStackTrace();
+				}
     			Intent i = new Intent(Intent.ACTION_SEND);
     			i.setType("message/rfc822");
     			i.putExtra(Intent.EXTRA_EMAIL, new String[]{"softgear@gmail.com"});
-    			i.putExtra(Intent.EXTRA_SUBJECT, "BugReport " +  getString(R.string.app_name));
+    			i.putExtra(Intent.EXTRA_SUBJECT, "BugReport " +  getString(R.string.app_name) + " " + versionName );
     			startActivity( Intent.createChooser(i, "Select Email App"));
     			return true;
     		case R.id.refresh:
@@ -488,14 +495,21 @@ public class MultiPing extends Activity {
     	return false;
     }
     
-    private void refresh() {
-//		for(PingerItem pi: items) 
-//		{
-//			pi.ia=null;
-//			Thread t = new Thread(new NameResolver(pi.hostname));
-//			t.start();			
-//		}
-    	Intent intent = getIntent();
+    private void refresh() { 	
+    	try {
+    		OutputStreamWriter out=
+    			new OutputStreamWriter(openFileOutput(SAVEFILE, 0));
+    		for(int i=items.size()-1; i>=0; i--) {
+    			out.write(items.get(i).hostname + "\n");
+    		}
+    		out.close();
+    	}
+    	catch (Throwable t) {
+    		Toast.makeText(this, "Exception: " + t.toString(), Toast.LENGTH_SHORT).show();
+    	}
+    	
+    	// Restart
+    	Intent intent = getIntent();    	    	
         finish();
         startActivity(intent);
 	}
