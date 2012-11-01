@@ -514,10 +514,10 @@ public class MultiPing extends Activity {
         startActivity(intent);
 	}
 
-	public boolean onBackPressed()
+	public void onBackPressed()
     {    		
     	finish();
-    	return true;
+    	return;
     }
 }
 
