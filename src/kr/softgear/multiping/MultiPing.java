@@ -225,7 +225,12 @@ public class MultiPing extends Activity {
 				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
 					InetAddress inetAddress = enumIpAddr.nextElement();
 					if (!inetAddress.isLoopbackAddress()) {
-						sLocalIpAddress = sLocalIpAddress + " " + inetAddress.getHostAddress().toString();
+						String sIpAddress = inetAddress.getHostAddress().toString();
+						if(sIpAddress.startsWith("fe80:")) {
+							// Ignore IPv6 Link local address
+						} else {
+							sLocalIpAddress = sLocalIpAddress + " " + sIpAddress;
+						}
 					}
 				}
 			}
