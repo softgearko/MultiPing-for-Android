@@ -68,6 +68,8 @@ class ViewWrapper {
 
 public class MultiPing extends Activity {	
 	private static final String LOG_TAG = "MultiPing";
+	private TextView myTextView = null;
+	private EditText myEditText = null;
 	
 	private class PingerItem {		 
 		String hostname = null; 
@@ -213,6 +215,10 @@ public class MultiPing extends Activity {
     Handler handler = new Handler() {
     	@Override
 		public void handleMessage(Message msg) {
+            String localIp = getLocalIpAddress();
+            if (localIp == null) localIp = "unknown";
+            myTextView.setText("local IP : " + localIp);
+            
     		pia.notifyDataSetChanged();
 		}
 	};
@@ -228,6 +234,8 @@ public class MultiPing extends Activity {
 						String sIpAddress = inetAddress.getHostAddress().toString();
 						if(sIpAddress.startsWith("fe80:")) {
 							// Ignore IPv6 Link local address
+						} else if(sIpAddress.startsWith("::127.") || sIpAddress.startsWith("::172.")) {
+							// Ignore local loopback address
 						} else {
 							sLocalIpAddress = sLocalIpAddress + " " + sIpAddress;
 						}
@@ -298,7 +306,7 @@ public class MultiPing extends Activity {
 		}
 	}
 	
-	private boolean AddHostName(String hostname, EditText myEditText) {		
+	private boolean AddHostName(String hostname) {		
 		PingerItem pi = new PingerItem();
 		pi.hostname = hostname;	
 		items.add(0,pi);
@@ -313,9 +321,9 @@ public class MultiPing extends Activity {
 		} else {
 			myEditText.setText("");		
 		}
+
 		return true;
 	}
-	
 	
     /** Called when the activity is first created. */
     @Override
@@ -324,8 +332,8 @@ public class MultiPing extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
                 
-        final EditText myEditText = (EditText)findViewById(R.id.myEditText);
-        final TextView myTextView = (TextView)findViewById(R.id.myTextView);
+        myEditText = (EditText)findViewById(R.id.myEditText);
+        myTextView = (TextView)findViewById(R.id.myTextView);
         final ListView myListView = (ListView)findViewById(R.id.myListView);
         final Button myButton = (Button) findViewById(R.id.myButton);
         
@@ -373,7 +381,9 @@ public class MultiPing extends Activity {
         			if(keyCode==KeyEvent.KEYCODE_DPAD_CENTER || keyCode==KeyEvent.KEYCODE_ENTER) {        				
         				String hostname = myEditText.getText().toString();
         				hostname = hostname.replace('*', '.');
-        				return AddHostName(hostname, myEditText);
+        				boolean result = AddHostName(hostname);
+        				saveItems();
+        				return result;
         			}    				
         		}
         		return false;
@@ -384,35 +394,13 @@ public class MultiPing extends Activity {
             public void onClick(View v) {
             	String hostname = myEditText.getText().toString();
             	hostname = hostname.replace('*', '.');
-            	AddHostName(hostname, myEditText);
+            	AddHostName(hostname);
+        		saveItems();
             	return;
             }
         });
         
-        // Read host from file
-        try {
-    		InputStream in = openFileInput(SAVEFILE);
-    		
-    		if(in!=null) {
-    			InputStreamReader tmp=new InputStreamReader(in);
-    			BufferedReader reader=new BufferedReader(tmp);
-    			String hostname;
-//    			StringBuffer buf=new StringBuffer();
-    			while ((hostname=reader.readLine()) != null) {
-//    				Log.v("multiping","read hostname="+hostname);
-    				AddHostName(hostname, myEditText);
-    			}
-    			in.close();
-    			pia.notifyDataSetChanged();
-    			myEditText.setText("");
-//    			Toast.makeText(this, "saved file loaded", Toast.LENGTH_SHORT).show();
-    		}
-    	}
-    	catch (Throwable t)
-    	{
-    		//
-    	}  
-   	
+        loadItems();        
     }
     
     public void onStart() {
@@ -429,8 +417,10 @@ public class MultiPing extends Activity {
 //    						pi.result_av = -1;
 //    						items.set(i,pi);    						
     						Thread t1 = new Thread(new Pinger80(pi.ia));
+    						t1.setName("Pinger80 " + pi.hostname);
     						t1.start();    						
     						Thread t2 = new Thread(new PingerAv(pi.ia));
+    						t2.setName("PingerAv " + pi.hostname);
     						t2.start();
     					}
     				}
@@ -452,9 +442,33 @@ public class MultiPing extends Activity {
     	m_background.start();  
     }
     
-    public void onStop() {
-    	super.onStop(); 
-      	
+    private void loadItems() {
+        // Read host from file        
+        try {
+    		InputStream in = openFileInput(SAVEFILE);
+    		
+    		if(in!=null) {
+    			InputStreamReader tmp=new InputStreamReader(in);
+    			BufferedReader reader=new BufferedReader(tmp);
+    			String hostname;
+//    			StringBuffer buf=new StringBuffer();
+    			while ((hostname=reader.readLine()) != null) {
+//    				Log.v("multiping","read hostname="+hostname);
+    				AddHostName(hostname);
+    			}
+    			in.close();
+    			pia.notifyDataSetChanged();
+    			myEditText.setText("");
+//    			Toast.makeText(this, "saved file loaded", Toast.LENGTH_SHORT).show();
+    		}
+    	}
+    	catch (Throwable t)
+    	{
+    		//
+    	}
+    }
+    
+    private void saveItems() {
     	try {
     		OutputStreamWriter out=
     			new OutputStreamWriter(openFileOutput(SAVEFILE, 0));
@@ -466,6 +480,11 @@ public class MultiPing extends Activity {
     	catch (Throwable t) {
     		Toast.makeText(this, "Exception: " + t.toString(), Toast.LENGTH_SHORT).show();
     	}
+    }
+    
+    public void onStop() {
+    	super.onStop(); 
+    	//saveItems();
     	isRunning= false; 	
     }
     
