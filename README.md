@@ -15,3 +15,14 @@ The "ping" application supports multiple destinations to check IP connectivity.
 
 * [F-Droid)[https://f-droid.org/repository/browse/?fdid=kr.softgear.multiping]
 
+## Screenshots
+
+![](MultiPing1.jpg)
+
+![](multiping1.png)
+
+![](multiping2.png)
+
+![](multiping6-1.png)
+
+![](multiping6-2.png)
