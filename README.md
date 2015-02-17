@@ -18,3 +18,15 @@ The "ping" application supports multiple destinations to check IP connectivity.
 ## License
 
 See [the license file](LICENSE.txt).
+
+## Screenshots
+
+![](MultiPing1.jpg)
+
+![](multiping1.png)
+
+![](multiping2.png)
+
+![](multiping6-1.png)
+
+![](multiping6-2.png)
