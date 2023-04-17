@@ -1,0 +1,14 @@
+<dependencies>
+  <compile
+      roots="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar:unspecified@jar">
+    <dependency
+        name="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar:unspecified@jar"
+        simpleName="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar"/>
+  </compile>
+  <package
+      roots="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar:unspecified@jar">
+    <dependency
+        name="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar:unspecified@jar"
+        simpleName="__local_aars__:D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\libs\admob-sdk-android.jar"/>
+  </package>
+</dependencies>
