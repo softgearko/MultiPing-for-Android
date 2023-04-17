@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "kr.softgear.multiping.app-mergeDebugResources-3:/values/values.xml",
+            "map": [
+                {
+                    "source": "D:\\Dev\\LTGithub\\MultiPing-for-Android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "103,57",
+                        "endColumns": "46,44",
+                        "endOffsets": "145,97"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,102",
+                        "endColumns": "46,44",
+                        "endOffsets": "97,142"
+                    }
+                },
+                {
+                    "source": "D:\\Dev\\LTGithub\\MultiPing-for-Android\\app\\src\\main\\res\\values\\attrs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "8",
+                        "startOffsets": "66",
+                        "endLines": "8",
+                        "endColumns": "28",
+                        "endOffsets": "458"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "147",
+                        "endLines": "10",
+                        "endColumns": "28",
+                        "endOffsets": "528"
+                    }
+                }
+            ]
+        }
+    ]
+}

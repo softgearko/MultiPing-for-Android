@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.2.2" type="incidents">
+
+    <incident
+        id="ResAuto"
+        severity="fatal"
+        message="In Gradle projects, always use `http://schemas.android.com/apk/res-auto` for custom attributes">
+        <location
+            file="${:MultiPing*release*sourceProvider*0*resDir*0}/layout/main.xml"
+            line="4"
+            column="18"
+            startOffset="133"
+            endLine="4"
+            endColumn="74"
+            endOffset="189"/>
+    </incident>
+
+</incidents>

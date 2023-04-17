@@ -1,0 +1,8 @@
+kr.softgear.multiping.app-pngs-0 D:\Dev\LTGithub\MultiPing-for-Android\app\build\generated\res\pngs\debug
+kr.softgear.multiping.app-resValues-1 D:\Dev\LTGithub\MultiPing-for-Android\app\build\generated\res\resValues\debug
+kr.softgear.multiping.app-rs-2 D:\Dev\LTGithub\MultiPing-for-Android\app\build\generated\res\rs\debug
+kr.softgear.multiping.app-mergeDebugResources-3 D:\Dev\LTGithub\MultiPing-for-Android\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+kr.softgear.multiping.app-mergeDebugResources-4 D:\Dev\LTGithub\MultiPing-for-Android\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+kr.softgear.multiping.app-merged_res-5 D:\Dev\LTGithub\MultiPing-for-Android\app\build\intermediates\merged_res\debug
+kr.softgear.multiping.app-debug-6 D:\Dev\LTGithub\MultiPing-for-Android\app\src\debug\res
+kr.softgear.multiping.app-main-7 D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\res
