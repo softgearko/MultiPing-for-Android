@@ -1,3 +1,13 @@
+# Fork Updates
+
+Updated to latest gradle and Android platform 32.
+
+Added port number functionality.
+
+To ping a specific port, enter the IP address folowwed by : then the port number.
+
+ex: 192.168.1.100:443
+
 # MultiPing for Android
 
 ## Features

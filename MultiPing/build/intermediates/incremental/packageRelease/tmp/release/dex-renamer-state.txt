@@ -1,0 +1,4 @@
+#Mon Apr 17 14:52:06 CEST 2023
+base.0=D\:\\Dev\\LTGithub\\MultiPing-for-Android\\MultiPing\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

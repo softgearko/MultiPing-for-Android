@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "kr.softgear.multiping.MultiPing-merged_res-5:/drawable_icon.png.flat",
+        "source": "kr.softgear.multiping.MultiPing-main-6:/drawable/icon.png"
+    },
+    {
+        "merged": "kr.softgear.multiping.MultiPing-merged_res-5:/layout_main.xml.flat",
+        "source": "kr.softgear.multiping.MultiPing-main-6:/layout/main.xml"
+    },
+    {
+        "merged": "kr.softgear.multiping.MultiPing-merged_res-5:/layout_pingitem.xml.flat",
+        "source": "kr.softgear.multiping.MultiPing-main-6:/layout/pingitem.xml"
+    },
+    {
+        "merged": "kr.softgear.multiping.MultiPing-merged_res-5:/menu_quick.xml.flat",
+        "source": "kr.softgear.multiping.MultiPing-main-6:/menu/quick.xml"
+    }
+]

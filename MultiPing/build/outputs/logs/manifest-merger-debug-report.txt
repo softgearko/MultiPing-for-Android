@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+	package
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:3:7-38
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:1-17:12
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:7:5-16:19
+	android:label
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:7:48-80
+	android:icon
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:7:18-47
+activity#kr.softgear.multiping.MultiPing
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:8:9-15:20
+	android:label
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:9:19-51
+	android:exported
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:10:13-36
+	android:name
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:8:19-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml:13:27-74
+uses-sdk
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Dev\LTGithub\MultiPing-for-Android\app\src\main\AndroidManifest.xml

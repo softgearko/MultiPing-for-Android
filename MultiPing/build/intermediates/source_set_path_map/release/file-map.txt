@@ -1,0 +1,8 @@
+kr.softgear.multiping.MultiPing-pngs-0 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\generated\res\pngs\release
+kr.softgear.multiping.MultiPing-resValues-1 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\generated\res\resValues\release
+kr.softgear.multiping.MultiPing-rs-2 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\generated\res\rs\release
+kr.softgear.multiping.MultiPing-mergeReleaseResources-3 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+kr.softgear.multiping.MultiPing-mergeReleaseResources-4 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+kr.softgear.multiping.MultiPing-merged_res-5 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\build\intermediates\merged_res\release
+kr.softgear.multiping.MultiPing-main-6 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\src\main\res
+kr.softgear.multiping.MultiPing-release-7 D:\Dev\LTGithub\MultiPing-for-Android\MultiPing\src\release\res
